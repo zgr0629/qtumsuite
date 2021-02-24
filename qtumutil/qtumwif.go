@@ -8,10 +8,10 @@ import (
 	"bytes"
 	"errors"
 
-	"github.com/bebest2010/qtumsuite/qtumd/chaincfg"
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcutil/base58"
+	"github.com/zgr0629/qtumsuite/qtumd/chaincfg"
 )
 
 // ErrMalformedPrivateKey describes an error where a WIF-encoded private

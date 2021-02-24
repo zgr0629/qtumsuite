@@ -25,8 +25,8 @@
 // 	"fmt"
 // 	"log"
 
-// 	"github.com/bebest2010/qtumsuite/qtumutil"
-// 	"github.com/bebest2010/qtumsuite/qtumd/chaincfg"
+// 	"github.com/zgr0629/qtumsuite/qtumutil"
+// 	"github.com/zgr0629/qtumsuite/qtumd/chaincfg"
 // )
 
 // var testnet = flag.Bool("testnet", false, "operate on the testnet Bitcoin network")

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/bebest2010/qtumsuite/qtumd/rpcclient"
+	"github.com/zgr0629/qtumsuite/qtumd/rpcclient"
 )
 
 type Network int

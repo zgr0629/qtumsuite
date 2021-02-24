@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/bebest2010/qtumsuite/qtumd/chaincfg"
-	"github.com/bebest2010/qtumsuite/qtumutil"
+	"github.com/zgr0629/qtumsuite/qtumd/chaincfg"
+	"github.com/zgr0629/qtumsuite/qtumutil"
 )
 
 func TestAddrMainNet(t *testing.T) {

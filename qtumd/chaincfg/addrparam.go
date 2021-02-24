@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	wire "github.com/bebest2010/qtumsuite/qtumd/wire"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	wire "github.com/zgr0629/qtumsuite/qtumd/wire"
 )
 
 // Params defines a Bitcoin network by its parameters.  These parameters may be

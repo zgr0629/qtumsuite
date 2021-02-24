@@ -23,9 +23,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/bebest2010/qtumsuite/qtumd/qtumjson"
 	"github.com/btcsuite/go-socks/socks"
 	"github.com/btcsuite/websocket"
+	"github.com/zgr0629/qtumsuite/qtumd/qtumjson"
 )
 
 var (

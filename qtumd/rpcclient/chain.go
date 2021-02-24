@@ -10,9 +10,9 @@ import (
 	"encoding/hex"
 	"encoding/json"
 
-	"github.com/bebest2010/qtumsuite/qtumd/qtumjson"
-	wire "github.com/bebest2010/qtumsuite/qtumd/wire"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/zgr0629/qtumsuite/qtumd/qtumjson"
+	wire "github.com/zgr0629/qtumsuite/qtumd/wire"
 )
 
 // FutureGetBestBlockHashResult is a future promise to deliver the result of a

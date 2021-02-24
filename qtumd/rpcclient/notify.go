@@ -17,8 +17,8 @@ import (
 	"github.com/btcsuite/btcutil"
 
 	//"github.com/qtumsuite/qtumd/chaincfg/chainhash"
-	btcjson "github.com/bebest2010/qtumsuite/qtumd/qtumjson"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	btcjson "github.com/zgr0629/qtumsuite/qtumd/qtumjson"
 )
 
 var (

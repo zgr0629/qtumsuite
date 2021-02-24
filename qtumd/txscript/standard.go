@@ -7,7 +7,7 @@ package txscript
 import (
 	"fmt"
 
-	qtumutil "github.com/bebest2010/qtumsuite/qtumutil"
+	qtumutil "github.com/zgr0629/qtumsuite/qtumutil"
 )
 
 // MultiSigScript returns a valid script for a multisignature redemption where
