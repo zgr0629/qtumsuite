@@ -9,11 +9,11 @@ import (
 	"encoding/hex"
 	"encoding/json"
 
-	btcjson "github.com/qtumsuite/qtumd/qtumjson"
+	btcjson "github.com/zgr0629/qtumsuite/qtumd/qtumjson"
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	wire "github.com/qtumsuite/qtumd/wire"
-	btcutil "github.com/qtumsuite/qtumutil"
+	wire "github.com/zgr0629/qtumsuite/qtumd/wire"
+	btcutil "github.com/zgr0629/qtumsuite/qtumutil"
 )
 
 // SigHashType enumerates the available signature hashing types that the

@@ -7,7 +7,7 @@ package rpcclient
 import (
 	"encoding/json"
 
-	btcjson "github.com/qtumsuite/qtumd/qtumjson"
+	btcjson "github.com/zgr0629/qtumsuite/qtumd/qtumjson"
 )
 
 // FutureGetAddedNodeInfoResult is a future promise to deliver the result of a

@@ -16,7 +16,7 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btcutil"
 
-	//"github.com/qtumsuite/qtumd/chaincfg/chainhash"
+	//"github.com/zgr0629/qtumsuite/qtumd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	btcjson "github.com/zgr0629/qtumsuite/qtumd/qtumjson"
 )
