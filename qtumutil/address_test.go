@@ -2,17 +2,17 @@
 package qtumutil_test
 
 import (
+	"github.com/btcsuite/btcutil"
 	"strings"
 	"testing"
 
 	"github.com/zgr0629/qtumsuite/qtumd/chaincfg"
-	"github.com/zgr0629/qtumsuite/qtumutil"
 )
 
 func TestAddrMainNet(t *testing.T) {
 	var chainParams = &chaincfg.MainNetAddrParams
 	pubKeyHash := make([]byte, 20)
-	addr, err := qtumutil.NewAddressPubKeyHash(pubKeyHash, chainParams)
+	addr, err := btcutil.NewAddressPubKeyHash(pubKeyHash, chainParams)
 	if err != nil {
 		t.Errorf("create address err %v", err)
 		return
@@ -27,7 +27,7 @@ func TestAddrMainNet(t *testing.T) {
 func TestAddrTestNet(t *testing.T) {
 	var chainParams = &chaincfg.TestNet3AddrParams
 	pubKeyHash := make([]byte, 20)
-	addr, err := qtumutil.NewAddressPubKeyHash(pubKeyHash, chainParams)
+	addr, err := btcutil.NewAddressPubKeyHash(pubKeyHash, chainParams)
 	if err != nil {
 		t.Errorf("create address err %v", err)
 		return
@@ -47,14 +47,14 @@ func TestWifMainNet(t *testing.T) {
 
 	chainParams := &chaincfg.MainNetAddrParams
 
-	priWif, err := qtumutil.DecodeWIF(privKey1)
+	priWif, err := btcutil.DecodeWIF(privKey1)
 	if err != nil {
 		t.Errorf("DecodeWIF(%v) err %v", privKey1, err)
 		return
 	}
 	// Create and print new payment address, specific to the active network.
 	pubKeyBytes := priWif.PrivKey.PubKey().SerializeCompressed()
-	pubKey, err := qtumutil.NewAddressPubKey(pubKeyBytes, chainParams)
+	pubKey, err := btcutil.NewAddressPubKey(pubKeyBytes, chainParams)
 	if err != nil {
 		t.Errorf("Create pubkey err %v", err)
 		return
@@ -71,14 +71,14 @@ func TestWifTestNet(t *testing.T) {
 
 	chainParams := &chaincfg.TestNet3AddrParams
 
-	priWif, err := qtumutil.DecodeWIF(privKey1)
+	priWif, err := btcutil.DecodeWIF(privKey1)
 	if err != nil {
 		t.Errorf("DecodeWIF(%v) err %v", privKey1, err)
 		return
 	}
 	// Create and print new payment address, specific to the active network.
 	pubKeyBytes := priWif.PrivKey.PubKey().SerializeCompressed()
-	pubKey, err := qtumutil.NewAddressPubKey(pubKeyBytes, chainParams)
+	pubKey, err := btcutil.NewAddressPubKey(pubKeyBytes, chainParams)
 	if err != nil {
 		t.Errorf("Create pubkey err %v", err)
 		return
@@ -93,15 +93,15 @@ func TestSegwitAddrMainNet(t *testing.T) {
 	var privKey1 = "cRfeMAyvuTtMVCWAb1EVBEDju7AivtmYL4trk4ckT4uorVEgYuoq"
 	expectAddr := "qc1qzuhqv5m9gm33gyq93k0d7zew5avmz5e8vlv49r"
 	chainParams := &chaincfg.MainNetAddrParams
-	wif, err := qtumutil.DecodeWIF(privKey1)
+	wif, err := btcutil.DecodeWIF(privKey1)
 	if err != nil {
 		t.Errorf("DecodeWIF(%v) err %v", privKey1, err)
 		return
 	}
 
 	pubkey := wif.PrivKey.PubKey().SerializeCompressed()
-	witnessProg := qtumutil.Hash160(pubkey)
-	segAddr, err := qtumutil.NewAddressWitnessPubKeyHash(witnessProg, chainParams)
+	witnessProg := btcutil.Hash160(pubkey)
+	segAddr, err := btcutil.NewAddressWitnessPubKeyHash(witnessProg, chainParams)
 	if err != nil {
 		t.Errorf("Create segAddr err %v", err)
 		return
@@ -118,15 +118,15 @@ func TestSegwitAddrTestNet(t *testing.T) {
 	var privKey1 = "cRfeMAyvuTtMVCWAb1EVBEDju7AivtmYL4trk4ckT4uorVEgYuoq"
 	expectAddr := "tq1qzuhqv5m9gm33gyq93k0d7zew5avmz5e8wfdt59"
 	chainParams := &chaincfg.TestNet3AddrParams
-	wif, err := qtumutil.DecodeWIF(privKey1)
+	wif, err := btcutil.DecodeWIF(privKey1)
 	if err != nil {
 		t.Errorf("DecodeWIF(%v) err %v", privKey1, err)
 		return
 	}
 
 	pubkey := wif.PrivKey.PubKey().SerializeCompressed()
-	witnessProg := qtumutil.Hash160(pubkey)
-	segAddr, err := qtumutil.NewAddressWitnessPubKeyHash(witnessProg, chainParams)
+	witnessProg := btcutil.Hash160(pubkey)
+	segAddr, err := btcutil.NewAddressWitnessPubKeyHash(witnessProg, chainParams)
 	if err != nil {
 		t.Errorf("Create segAddr err %v", err)
 		return
